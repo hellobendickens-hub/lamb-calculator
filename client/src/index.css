@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* Lamb Calculator specific colors */
+  --brand-orange: hsl(30, 100%, 44%);
+  --brand-orange-dark: hsl(30, 100%, 40%);
+  --lamb-green: hsl(80, 25%, 29%);
+  --warm-brown: hsl(25, 75%, 30%);
+  --cream: hsl(60, 56%, 95%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Custom Slider Styling */
+.lamb-slider {
+  -webkit-appearance: none;
+  background: hsl(0, 0%, 90%);
+  height: 12px;
+  border-radius: 6px;
+}
+
+.lamb-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: var(--brand-orange);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 8px hsla(30, 100%, 44%, 0.3);
+  transition: all 0.2s ease;
+}
+
+.lamb-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px hsla(30, 100%, 44%, 0.4);
+}
+
+.lamb-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  background: var(--brand-orange);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 8px hsla(30, 100%, 44%, 0.3);
+}
+
+/* Brand colors utility classes */
+.bg-brand-orange {
+  background-color: var(--brand-orange);
+}
+
+.bg-brand-orange-dark {
+  background-color: var(--brand-orange-dark);
+}
+
+.bg-lamb-green {
+  background-color: var(--lamb-green);
+}
+
+.bg-warm-brown {
+  background-color: var(--warm-brown);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.text-brand-orange {
+  color: var(--brand-orange);
+}
+
+.text-lamb-green {
+  color: var(--lamb-green);
+}
+
+.text-warm-brown {
+  color: var(--warm-brown);
+}
+
+.border-brand-orange {
+  border-color: var(--brand-orange);
+}
+
+.hover\:bg-brand-orange:hover {
+  background-color: var(--brand-orange);
+}
+
+.hover\:bg-brand-orange-dark:hover {
+  background-color: var(--brand-orange-dark);
+}
+
+.hover\:border-brand-orange:hover {
+  border-color: var(--brand-orange);
+}
+
+/* Smooth transitions for interactive elements */
+.transition-lamb {
+  transition: all 0.2s ease;
+}
