@@ -1,0 +1,17 @@
+{
+  "name": "Urban Lamb Calculator",
+  "short_name": "Lamb Calc",
+  "description": "Calculate the perfect lamb meal portions for your group",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f5efe6",
+  "theme_color": "#553026",
+  "icons": [
+    {
+      "src": "mirror/3d_lamb.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
