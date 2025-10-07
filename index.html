@@ -629,15 +629,17 @@
         gap: 15px;
         padding-bottom: 20px;
         -webkit-overflow-scrolling: touch;
+        padding-left: 15px;
+        padding-right: 15px;
       }
 
       .result-card {
-        flex: 0 0 85%;
+        flex: 0 0 calc(100% - 30px);
         scroll-snap-align: center;
       }
 
       .result-card-image {
-        object-fit: contain;
+        height: 350px;
       }
 
       .results-title {
