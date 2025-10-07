@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Tiempos';
+    src: url('../../../files/TiemposTextWeb-Regular_efcab926-3afe-4a65-87ab-10a71e337e45.woff2') format('woff2');
+   font-weight:600;
+    font-style: normal;
+    font-display: swap;
+}
+.h1,.h2,h1,h2{
+font-family: 'Tiempos' !important;
+}
